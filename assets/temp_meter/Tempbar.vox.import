@@ -1,0 +1,17 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions.To.Mesh"
+type="Mesh"
+path="res://.import/Tempbar.vox-1177fd656f9ade212873a2b30e4545d6.mesh"
+
+[deps]
+
+source_file="res://assets/temp_meter/Tempbar.vox"
+dest_files=[ "res://.import/Tempbar.vox-1177fd656f9ade212873a2b30e4545d6.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
+FirstKeyframeOnly=true
