@@ -3,7 +3,6 @@ extends Node2D
 # Hold down left click within the collision, should then increase static value from 1-100
 const CHARGE_LIMIT = PlayerVariables.CHARGE_LIMIT;
 var charge: int = PlayerVariables.CHARGE;
-var isActivated: bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,10 +13,12 @@ func _input(event):
 
 func _physics_process(delta):
 	if (Input.is_mouse_button_pressed(1)):
-		isActivated = true;
-		increase_charge(isActivated);
+		increase_charge();
+		
+	if (!Input.is_mouse_button_pressed(1)):
+		charge = 0;
 	
-func increase_charge(isActivated: bool):
+func increase_charge():
 	if (charge > CHARGE_LIMIT):
 		charge = CHARGE_LIMIT;
 	elif (charge < CHARGE_LIMIT):
