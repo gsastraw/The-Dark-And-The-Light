@@ -1,3 +1,16 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Temperature/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Temperature/Arrow.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Temperature/Bar.tscn" type="PackedScene" id=3]
 
 [node name="Temperature" type="Node2D"]
+
+[node name="Button" parent="." instance=ExtResource( 1 )]
+position = Vector2( -9, 0 )
+
+[node name="Bar" parent="." instance=ExtResource( 3 )]
+position = Vector2( 26, 0 )
+
+[node name="Arrow" parent="." instance=ExtResource( 2 )]
+position = Vector2( -5, 0 )
