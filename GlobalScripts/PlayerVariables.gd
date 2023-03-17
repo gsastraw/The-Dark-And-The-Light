@@ -7,6 +7,7 @@ extends Node
 var CHARGE: int = 0;
 const CHARGE_LIMIT: int = 150;
 var SCORE: int = 0;
+var TEMPERATURE: float = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
