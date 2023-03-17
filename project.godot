@@ -14,6 +14,10 @@ config/name="Griller"
 run/main_scene="res://Level/Level.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerVariables="*res://GlobalScripts/PlayerVariables.gd"
+
 [global]
 
 scene=false
