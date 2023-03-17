@@ -1,0 +1,17 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions.To.Mesh"
+type="Mesh"
+path="res://.import/raw.vox-05691776fc000747bf6f70678b131bb0.mesh"
+
+[deps]
+
+source_file="res://assets/steak/raw.vox"
+dest_files=[ "res://.import/raw.vox-05691776fc000747bf6f70678b131bb0.mesh" ]
+
+[params]
+
+Scale=1.0
+GreedyMeshGenerator=true
+SnapToGround=false
+FirstKeyframeOnly=true
