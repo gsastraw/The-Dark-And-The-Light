@@ -1,23 +1,25 @@
-extends Node2D
+extends Area2D
 signal button_pressed
 
 var isActivated:bool = false
+var hold_timer: float = 0
+var hold_time_required: float = 0.5
+
 onready var sprite = $Sprite
 
-func _input(event):
-	pass;
-
-func _physics_process(delta):
-	if (Input.is_mouse_button_pressed(1)):
-		isActivated = true
-		increase_charge();
-		
-	if (!Input.is_mouse_button_pressed(1) and isActivated):
-		emit_signal("button_pressed")
-		isActivated = false
-		PlayerVariables.CHARGE = 0;
+func _process(delta: float) -> void:
+	if (isActivated):
+		increase_charge()
+	sprite.rotation_degrees = PlayerVariables.CHARGE / 3
 	
-	sprite.rotation_degrees = PlayerVariables.CHARGE/3
+func _input_event(viewport, event, shape_idx):
+	if (event is InputEventMouseButton and event.button_index == BUTTON_LEFT):
+		if (event.pressed and shape_idx == 0):
+			isActivated = true
+		elif (!event.pressed and isActivated):
+			emit_signal("button_pressed")
+			isActivated = false
+			PlayerVariables.CHARGE = 0
 	
 func increase_charge() -> void:
 	if (PlayerVariables.CHARGE > PlayerVariables.CHARGE_LIMIT):
