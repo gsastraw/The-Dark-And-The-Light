@@ -11,6 +11,7 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
 position = Vector2( -1459.08, -1510.32 )
 scale = Vector2( 1.19886, 1.18234 )
 polygon = PoolVector2Array( 1464, 1325, 1852, 1319, 1856, 1667, 1462, 1669 )

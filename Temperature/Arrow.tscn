@@ -3,7 +3,7 @@
 [ext_resource path="res://Temperature/Arrow.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2, 18 )
+extents = Vector2( 1, 5.5 )
 
 [node name="Arrow" type="KinematicBody2D"]
 script = ExtResource( 1 )

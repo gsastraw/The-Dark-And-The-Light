@@ -18,4 +18,4 @@ func _input(event):
 				set_physics_process(false);
 
 func _physics_process(delta):
-	self.global_position = get_global_mouse_position() + drag_offset;
+	get_parent().global_position = get_global_mouse_position();
