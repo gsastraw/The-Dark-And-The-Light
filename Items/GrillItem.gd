@@ -1,6 +1,5 @@
 extends Spatial
 export(PackedScene) var grillItem
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -16,3 +15,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_DropZone_item_dropped():
+	$AnimationCook.play("Cook")

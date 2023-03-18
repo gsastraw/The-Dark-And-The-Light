@@ -20,3 +20,4 @@ position = Vector2( 20, 0 )
 [node name="Sprite" type="Sprite" parent="."]
 
 [connection signal="button_pressed" from="Button" to="Arrow" method="_on_Button_button_pressed"]
+[connection signal="arrow_reseted" from="Arrow" to="Button" method="_on_Arrow_arrow_reseted"]

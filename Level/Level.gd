@@ -28,3 +28,8 @@ func _process(delta):
 		grillItem.texture = texture
 
 	$ScoreUI/LabelNumber.text = str(PlayerVariables.SCORE)
+
+
+func _on_DropZone_item_dropped():
+	$Temperature/Button.disable_button(false)
+	$AudioGrilling.play()
