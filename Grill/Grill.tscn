@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/Grill/Grate/grill_grate_2d.png" type="Texture" id=1]
+[ext_resource path="res://assets/Grill/Grill/Grill.png" type="Texture" id=2]
+
+[node name="Grill" type="Node2D"]
+
+[node name="Grill" type="Sprite" parent="."]
+position = Vector2( 505, 250 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+
+[node name="GrillGrate2d" type="Sprite" parent="."]
+position = Vector2( 504, 253 )
+scale = Vector2( 0.632813, 0.616667 )
+texture = ExtResource( 1 )
