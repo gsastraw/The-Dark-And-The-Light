@@ -6,6 +6,7 @@ var direction_right = Vector2(1, 0)
 var direction_left = Vector2(-1, 0)
 var velocity
 var shot:bool = false
+var og_position = self.position
 
 # Called when the node enters the scene tree for the first time.
 
@@ -31,6 +32,7 @@ func _physics_process(delta):
 			emit_signal("arrow_succeeded")
 		else:
 			print("FAIL")
+		reset_arrow()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -39,3 +41,6 @@ func _physics_process(delta):
 func _on_Button_button_pressed():
 	speed = PlayerVariables.CHARGE
 	shot = true
+
+func reset_arrow():
+	self.position = og_position

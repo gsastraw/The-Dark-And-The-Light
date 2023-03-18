@@ -16,7 +16,7 @@ func _on_Draggable_input_event(viewport, event, shape_idx):
 	the collision shape
 	"""
 	
-	if event.is_action_pressed("ui_touch"):
+	if event.is_action_pressed("ui_touch") and self.is_in_group("draggable"):
 		print(event)
 		get_tree().set_input_as_handled()
 		previous_mouse_position = event.position

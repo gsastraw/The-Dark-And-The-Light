@@ -1,6 +1,7 @@
 extends Node2D
 var held_object = null
 
+onready var grillItem = $Draggable/Screen
 
 
 # Called when the node enters the scene tree for the first time.
@@ -23,5 +24,7 @@ func _unhandled_input(event):
 
 func _process(delta):
 	var texture = $Viewport.get_texture()
-	$Draggable/Position2D/Screen.texture = texture
+	if(is_instance_valid(grillItem)):
+		grillItem.texture = texture
+
 	$ScoreUI/LabelNumber.text = str(PlayerVariables.SCORE)
