@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2, 12 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 0, -53 )
+scale = Vector2( 4, 2.92123 )
+color = Color( 0.764706, 1, 0.247059, 1 )
+polygon = PoolVector2Array( -2, -12, 0, 5, 2, -12 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, -5 )
+shape = SubResource( 1 )
