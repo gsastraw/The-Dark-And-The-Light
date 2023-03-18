@@ -20,6 +20,7 @@ func _on_Draggable_input_event(viewport, event, shape_idx):
 		print(event)
 		get_tree().set_input_as_handled()
 		previous_mouse_position = event.position
+		print(event.position)
 		is_dragging = true
 
 
@@ -40,7 +41,18 @@ func _input(event):
 	
 	
 	if is_dragging and event is InputEventMouseMotion:
-		position += event.position - previous_mouse_position
+		var new_position = position + event.position - previous_mouse_position
+		
+		# Get the size of the viewport
+		var viewport_size = get_viewport().get_size()
+		
+		# Clamp the new position to the viewport size
+		new_position.x = clamp(new_position.x, 0, viewport_size.x - 30)
+		new_position.y = clamp(new_position.y, 0, viewport_size.y - 30)
+		
+		# Set the new position
+		position = new_position
+		
 		previous_mouse_position = event.position
 		
 func _process(delta):
