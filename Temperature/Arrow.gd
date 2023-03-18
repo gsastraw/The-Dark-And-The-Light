@@ -1,5 +1,5 @@
 extends KinematicBody2D
-var speed = 350
+var speed = 0
 var direction_right = Vector2(1, 0)
 var direction_left = Vector2(-1, 0)
 var velocity
@@ -23,3 +23,8 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Button_button_pressed():
+	speed = PlayerVariables.CHARGE
+	print("Signal sent!!")
