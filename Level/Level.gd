@@ -23,9 +23,7 @@ func _unhandled_input(event):
 
 
 func _process(delta):
-	var texture = $Viewport.get_texture()
-	if(is_instance_valid(grillItem)):
-		grillItem.texture = texture
+	
 
 	$ScoreUI/LabelNumber.text = str(PlayerVariables.SCORE)
 

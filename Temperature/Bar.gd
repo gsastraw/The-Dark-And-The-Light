@@ -47,3 +47,7 @@ func randomize_range():
 	leftMarker.position.x = rightmost.position.x - distance*highValue
 	PlayerVariables.HIGHRANGE = rightMarker.global_position.x
 	PlayerVariables.LOWRANGE = leftMarker.global_position.x
+
+
+func _on_Arrow_arrow_succeeded():
+	randomize_range()

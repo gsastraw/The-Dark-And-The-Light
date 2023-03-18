@@ -26,8 +26,8 @@ __meta__ = {
 }
 
 [node name="ResetButton" type="Button" parent="CenterContainer"]
-margin_left = 462.0
-margin_right = 562.0
+margin_left = 590.0
+margin_right = 690.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 100, 50 )
 text = "Reset"

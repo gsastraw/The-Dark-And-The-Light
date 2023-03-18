@@ -1,5 +1,6 @@
 extends KinematicBody2D
 signal arrow_succeeded
+signal arrow_failed
 signal arrow_reseted
 
 var speed = 0

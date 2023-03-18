@@ -42,3 +42,8 @@ func _input(event):
 	if is_dragging and event is InputEventMouseMotion:
 		position += event.position - previous_mouse_position
 		previous_mouse_position = event.position
+		
+func _process(delta):
+	var texture = $Viewport.get_texture()
+	if(is_instance_valid($Screen)):
+		$Screen.texture = texture
