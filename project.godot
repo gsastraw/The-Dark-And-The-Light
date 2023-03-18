@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "DraggableItem",
+"language": "GDScript",
+"path": "res://Items/DraggableItem.gd"
+} ]
+_global_script_class_icons={
+"DraggableItem": ""
+}
+
 [application]
 
 config/name="Griller"
