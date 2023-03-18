@@ -1,0 +1,17 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions.To.Mesh"
+type="Mesh"
+path="res://.import/plate.vox-92f46cf5350261c0a00230ac591fd07e.mesh"
+
+[deps]
+
+source_file="res://assets/plate/plate.vox"
+dest_files=[ "res://.import/plate.vox-92f46cf5350261c0a00230ac591fd07e.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
+FirstKeyframeOnly=true
