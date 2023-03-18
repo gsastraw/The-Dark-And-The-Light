@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "DraggableItem",
+"language": "GDScript",
+"path": "res://Items/DraggableItem.gd"
+} ]
+_global_script_class_icons={
+"DraggableItem": ""
+}
+
 [application]
 
 config/name="Griller"
@@ -36,4 +46,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/filters/sharpen_intensity=0.25
+quality/filters/anisotropic_filter_level=1
 environment/default_environment="res://default_env.tres"

@@ -1,13 +1,8 @@
 extends Node2D
-
 signal button_pressed
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass; # Replace with function body.
-
 var isActivated:bool = false
-
+onready var sprite = $Sprite
 
 func _input(event):
 	pass;
@@ -21,7 +16,8 @@ func _physics_process(delta):
 		emit_signal("button_pressed")
 		isActivated = false
 		PlayerVariables.CHARGE = 0;
-		
+	
+	sprite.rotation_degrees = PlayerVariables.CHARGE/3
 	
 func increase_charge() -> void:
 	if (PlayerVariables.CHARGE > PlayerVariables.CHARGE_LIMIT):

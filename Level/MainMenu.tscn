@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/UI/PixeloidSansBold-GOjpP.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Level/MainMenu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_size = 3
+outline_color = Color( 0.215686, 0.0588235, 0.0588235, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_size = 3
+outline_color = Color( 0.215686, 0.0588235, 0.0588235, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 36
+outline_size = 3
+outline_color = Color( 0.215686, 0.0588235, 0.0588235, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.101961, 0, 0, 1 )
+border_color = Color( 0.431373, 1, 0.498039, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color( 0.239216, 0, 0, 0.6 )
+shadow_size = 25
+anti_aliasing = false
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -256.0
+margin_right = 296.0
+margin_bottom = 179.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "GRILL
+EVERYTHING"
+align = 1
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -506.0
+margin_top = 336.0
+margin_right = 494.0
+margin_bottom = 597.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "A game by:
+
+Edvin Danielsson
+Gregory Sahowdoispellthis
+Simon Arvidsson
+
+For \"IXD / GDT March Game Jam '23\".
+Theme is The Dark and the Light"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 164.0
+margin_top = 205.0
+margin_right = 856.0
+margin_bottom = 299.0
+theme = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 1, 0.427451, 0.427451, 1 )
+custom_colors/font_color = Color( 0, 1, 0.415686, 1 )
+custom_fonts/font = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "PRESS TO PLAY"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
