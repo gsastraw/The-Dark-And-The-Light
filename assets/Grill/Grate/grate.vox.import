@@ -1,0 +1,17 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions.To.Mesh"
+type="Mesh"
+path="res://.import/grate.vox-f6cc78a97dbb2d393372911de1f87b09.mesh"
+
+[deps]
+
+source_file="res://assets/Grill/Grate/grate.vox"
+dest_files=[ "res://.import/grate.vox-f6cc78a97dbb2d393372911de1f87b09.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
+FirstKeyframeOnly=true

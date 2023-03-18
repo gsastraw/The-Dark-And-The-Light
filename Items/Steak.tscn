@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/steak/raw.vox" type="ArrayMesh" id=1]
+[ext_resource path="res://Items/GrillItem.tscn" type="PackedScene" id=2]
+
+[node name="Steak" instance=ExtResource( 2 )]
+
+[node name="Position3D" parent="." index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Raw Steak" type="MeshInstance" parent="Position3D" index="0"]
+transform = Transform( 0.937847, -0.283972, 0.19951, 0.19951, 0.911534, 0.359587, -0.283972, -0.297434, 0.911534, 0.0889117, 0.18816, 0.491761 )
+mesh = ExtResource( 1 )
+skeleton = NodePath("../../..")
