@@ -11,8 +11,7 @@ var og_position = self.position
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = direction_right
+	reset_arrow()
 
 func _physics_process(delta):
 	# velocity = velocity * speed
@@ -43,4 +42,5 @@ func _on_Button_button_pressed():
 	shot = true
 
 func reset_arrow():
+	velocity = direction_right
 	self.position = og_position
