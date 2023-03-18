@@ -18,6 +18,10 @@ config/icon="res://icon.png"
 
 PlayerVariables="*res://GlobalScripts/PlayerVariables.gd"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/MagicaVoxel_Importer_with_Extensions/plugin.cfg" )
+
 [global]
 
 scene=false
