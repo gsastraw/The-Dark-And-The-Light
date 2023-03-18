@@ -1,0 +1,17 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions.To.Mesh"
+type="Mesh"
+path="res://.import/grill.vox-2f640b185b60cfebe56dae5a28bda30d.mesh"
+
+[deps]
+
+source_file="res://assets/Grill/Grill/grill.vox"
+dest_files=[ "res://.import/grill.vox-2f640b185b60cfebe56dae5a28bda30d.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
+FirstKeyframeOnly=true
