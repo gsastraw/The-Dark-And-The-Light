@@ -14,3 +14,5 @@ position = Vector2( 26, 0 )
 
 [node name="Arrow" parent="." instance=ExtResource( 2 )]
 position = Vector2( -5, 0 )
+
+[connection signal="button_pressed" from="Button" to="Arrow" method="_on_Button_button_pressed"]

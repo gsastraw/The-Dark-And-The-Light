@@ -5,7 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 var CHARGE: int = 0;
-const CHARGE_LIMIT: int = 150;
+const CHARGE_LIMIT: int = 1000;
 var SCORE: int = 0;
 var TEMPERATURE: float = 0;
 
