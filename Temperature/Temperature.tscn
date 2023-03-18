@@ -7,12 +7,16 @@
 [node name="Temperature" type="Node2D"]
 
 [node name="Button" parent="." instance=ExtResource( 1 )]
-position = Vector2( -9, 0 )
+position = Vector2( -75, -1 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 2
 
 [node name="Bar" parent="." instance=ExtResource( 3 )]
-position = Vector2( 26, 0 )
+position = Vector2( 507, 0 )
 
 [node name="Arrow" parent="." instance=ExtResource( 2 )]
-position = Vector2( -5, 0 )
+position = Vector2( 20, 0 )
+
+[node name="Sprite" type="Sprite" parent="."]
 
 [connection signal="button_pressed" from="Button" to="Arrow" method="_on_Button_button_pressed"]

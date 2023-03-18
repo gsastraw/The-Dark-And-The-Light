@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Temperature/Button.gd" type="Script" id=1]
+[ext_resource path="res://assets/temp_btn/temp_btn_2d.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 3.0
+radius = 150.0
 
 [node name="Button" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
 position = Vector2( 0, 1 )
 color = Color( 0.258824, 0.870588, 0.282353, 1 )
 polygon = PoolVector2Array( -2, -1, 0, -3, 2, -1, 0, 1 )
@@ -17,3 +19,7 @@ polygon = PoolVector2Array( -2, -1, 0, -3, 2, -1, 0, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )

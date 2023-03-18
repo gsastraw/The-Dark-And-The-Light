@@ -1,0 +1,17 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions.To.Mesh"
+type="Mesh"
+path="res://.import/temp_btn.vox-038e958cf8bbbb9895e6e94d853fe183.mesh"
+
+[deps]
+
+source_file="res://assets/temp_btn/temp_btn.vox"
+dest_files=[ "res://.import/temp_btn.vox-038e958cf8bbbb9895e6e94d853fe183.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
+FirstKeyframeOnly=true
