@@ -15,8 +15,6 @@ func _ready():
 	# print(abs(leftmost.position.x))
 	# leftmost.position.x - rightmost.position.x
 	# leftmost.distance
-
-	print(distance)
 	
 	randomize_range()
 
@@ -31,10 +29,8 @@ func randomize_range():
 	rng.randomize()
 	var random1 = rng.randf_range(0.05,1.0)
 	var random2 = rng.randf_range(0.05,1.0)
-	print(random1, " and ", random2)
 	
 	while(abs(random1 - random2) < 0.05 ):
-		print("too close mate")
 		if(random1 < 1):
 			random1 += 0.01
 		if(random2 > 0):
@@ -42,10 +38,8 @@ func randomize_range():
 	
 	
 	var highValue = max(random1, random2)
-	print("High value is ", highValue)
 	
 	var lowValue = min(random1, random2)
-	print("Low value is ", lowValue)
 	
 	
 	

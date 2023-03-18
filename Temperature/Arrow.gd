@@ -25,7 +25,6 @@ func _physics_process(delta):
 		speed -= 2.5
 	if (speed <= 0 and shot):
 		shot = false
-		print("Stopped. Checking range.")
 		if (global_position.x > PlayerVariables.LOWRANGE and global_position.x < PlayerVariables.HIGHRANGE):
 			print("SUCCESS")
 			PlayerVariables.SCORE += 1
@@ -40,4 +39,3 @@ func _physics_process(delta):
 func _on_Button_button_pressed():
 	speed = PlayerVariables.CHARGE
 	shot = true
-	print("Signal sent!!")
