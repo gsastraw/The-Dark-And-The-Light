@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/temp_btn/temp_btn_2d.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 150.0
+radius = 3.0
 
 [node name="Button" type="Node2D"]
 script = ExtResource( 1 )
