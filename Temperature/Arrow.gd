@@ -1,4 +1,6 @@
 extends KinematicBody2D
+signal arrow_succeeded
+
 var speed = 0
 var direction_right = Vector2(1, 0)
 var direction_left = Vector2(-1, 0)
@@ -26,6 +28,8 @@ func _physics_process(delta):
 		print("Stopped. Checking range.")
 		if (global_position.x > PlayerVariables.LOWRANGE and global_position.x < PlayerVariables.HIGHRANGE):
 			print("SUCCESS")
+			PlayerVariables.SCORE += 1
+			emit_signal("arrow_succeeded")
 		else:
 			print("FAIL")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
