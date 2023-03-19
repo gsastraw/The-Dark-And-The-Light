@@ -12,7 +12,10 @@ config_version=4
 
 config/name="Griller"
 run/main_scene="res://Level/MainMenu.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://assets/ground/Grass4x.png"
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0.0352941, 0.345098, 0.054902, 1 )
+config/icon="res://icon2.png"
 
 [autoload]
 
