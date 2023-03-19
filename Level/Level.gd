@@ -12,6 +12,7 @@ var instance
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	PlayerVariables.LIVES = 3
 	PlayerVariables.SCORE = 0
 	spawnGrillItem()
@@ -47,6 +48,7 @@ func _process(delta):
 
 
 func _on_DropZone_item_dropped():
+	$AudioMm.play()
 	$Temperature/Button.disable_button(false)
 	PlayerVariables.CURRENTLY_GRILLING = true
 	var lul = 0
@@ -61,6 +63,7 @@ func spawnGrillItem():
 
 func _on_arrow_success():
 	instance.queue_free()
+	$AudioTasty.play()
 	$AudioGrilling.stop()
 	spawnGrillItem()
 

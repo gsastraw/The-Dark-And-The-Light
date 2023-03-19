@@ -25,7 +25,9 @@ func _input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton and event.button_index == BUTTON_LEFT):
 		if (event.pressed and shape_idx == 0):
 			isActivated = true
+			$AudioButton.play()
 		elif (!event.pressed and isActivated):
+			$AudioButton.stop()
 			emit_signal("button_pressed")
 			isActivated = false
 			PlayerVariables.CURRRNYLY_COOKING = true

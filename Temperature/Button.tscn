@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Temperature/Button.gd" type="Script" id=1]
 [ext_resource path="res://assets/temp_btn/temp_btn_2d.png" type="Texture" id=2]
+[ext_resource path="res://assets/Audio/buttonAudio.mp3" type="AudioStream" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 133.0
@@ -16,3 +17,7 @@ disabled = true
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
+
+[node name="AudioButton" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.0

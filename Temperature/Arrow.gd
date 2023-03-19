@@ -59,6 +59,7 @@ func failure():
 
 
 func reset_arrow():
+	# $AudioOvercooked.play()
 	speed = 0
 	emit_signal("arrow_reseted")
 	velocity = direction_right
