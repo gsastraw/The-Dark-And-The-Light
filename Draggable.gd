@@ -9,10 +9,11 @@ var previous_mouse_position = Vector2()
 var is_dragging = false
 onready var viewport = get_parent().get_node("Viewport")
 onready var dropzone = get_parent().get_node("DropZone")
+onready var button = get_parent().get_node("Temperature/Button")
 
 func _ready():
 	#dropzone.item_dropped.connect("_on_DropZone_item_dropped")
-	
+	button.connect("button_pressed", self, "_on_Button_pressed")
 	dropzone.connect("item_dropped", self, "_on_DropZone_item_dropped")
 
 func _on_Draggable_input_event(viewport, event, shape_idx):
@@ -69,5 +70,5 @@ func _process(delta):
 		$Screen.texture = texture
 
 
-func _on_DropZone_item_dropped():
+func _on_Button_pressed():
 	$AnimationCooking.play("Cook")

@@ -6,6 +6,7 @@ var steak = preload("res://Draggable.tscn")
 
 onready var grillItem = $Draggable/Screen
 onready var arrow = get_node("Temperature/Arrow")
+onready var button = get_node("Temperature/Button")
 var instance
 
 
@@ -16,6 +17,7 @@ func _ready():
 		node.connect("clicked", self, "_on_pickable_clicked")
 	
 	arrow.connect("arrow_succeeded", self, "_on_arrow_success")
+	button.connect("button_pressed", self, "_on_Button_pressed")
 
 
 func _on_pickable_clicked(object):
@@ -43,7 +45,6 @@ func _process(delta):
 
 func _on_DropZone_item_dropped():
 	$Temperature/Button.disable_button(false)
-	$AudioGrilling.play()
 	PlayerVariables.CURRENTLY_GRILLING = true
 	var lul = 0
 	while PlayerVariables.CURRENTLY_GRILLING:
@@ -60,5 +61,7 @@ func _on_arrow_success():
 	$AudioGrilling.stop()
 	spawnGrillItem()
 
+func _on_Button_pressed():	
+		$AudioGrilling.play()
 	# add_child(instance)
 	

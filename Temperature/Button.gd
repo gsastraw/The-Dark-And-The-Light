@@ -28,6 +28,7 @@ func _input_event(viewport, event, shape_idx):
 		elif (!event.pressed and isActivated):
 			emit_signal("button_pressed")
 			isActivated = false
+			PlayerVariables.CURRRNYLY_COOKING = true
 			PlayerVariables.CHARGE = 0
 			disable_button(true)
 			
