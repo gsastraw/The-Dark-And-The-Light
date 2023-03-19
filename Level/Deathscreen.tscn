@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/UI/PixeloidSansBold-GOjpP.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Level/MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://assets/ground/Grass4x.png" type="Texture" id=4]
+[ext_resource path="res://assets/Audio/failure.mp3" type="AudioStream" id=5]
+[ext_resource path="res://assets/Audio/voice/failure_voice.mp3" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -32,6 +34,11 @@ anti_aliasing = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
+
+[node name="AudioFailureSong" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 580, 290 )
+stream = ExtResource( 5 )
+autoplay = true
 
 [node name="LabelScore" type="Label" parent="."]
 anchor_left = 0.5
@@ -79,5 +86,9 @@ position = Vector2( 626, 398 )
 scale = Vector2( 0.534979, 0.630859 )
 z_index = -1
 texture = ExtResource( 4 )
+
+[node name="AudioFailureVoice" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/overcooked.mp3-c6cd9b0188b2123587e66aa32b3c820c.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/voice/overcooked.mp3"
+dest_files=[ "res://.import/overcooked.mp3-c6cd9b0188b2123587e66aa32b3c820c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

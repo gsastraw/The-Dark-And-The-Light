@@ -35,7 +35,7 @@ func _unhandled_input(event):
 
 
 func _process(delta):
-	$ScoreUI/LabelNumber.text = str(PlayerVariables.SCORE)
+	$ScoreUI/LabelNumber.text = str(PlayerVariables.SCORE * 100)
 	$LivesUI/LabelNumber.text = str(PlayerVariables.LIVES)
 	$Lighting.set_energy(PlayerVariables.LIGHT_LEVEL_GRILL)
 	

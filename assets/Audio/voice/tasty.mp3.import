@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tasty.mp3-51b71ab4077e22c8bfbf2da8d4a88632.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/voice/tasty.mp3"
+dest_files=[ "res://.import/tasty.mp3-51b71ab4077e22c8bfbf2da8d4a88632.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

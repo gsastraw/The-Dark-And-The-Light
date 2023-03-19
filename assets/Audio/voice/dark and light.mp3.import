@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dark and light.mp3-22d4a4e4cf0d360a38dacef428362923.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/voice/dark and light.mp3"
+dest_files=[ "res://.import/dark and light.mp3-22d4a4e4cf0d360a38dacef428362923.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
