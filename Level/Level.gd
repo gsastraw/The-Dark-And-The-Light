@@ -1,5 +1,6 @@
 extends Node2D
 var held_object = null
+var meat_on_grill = null
 var steak = preload("res://Draggable.tscn")
 
 onready var grillItem = $Draggable/Screen
@@ -33,6 +34,12 @@ func _process(delta):
 func _on_DropZone_item_dropped():
 	$Temperature/Button.disable_button(false)
 	$AudioGrilling.play()
+	meat_on_grill = true
+	var lul = 0
+	while meat_on_grill:
+		yield(get_tree().create_timer(1.0), "timeout")
+		lul = lul +1
+		print(lul)
 	# spawnGrillItem()
 	
 func spawnGrillItem():
