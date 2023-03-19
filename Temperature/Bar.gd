@@ -8,7 +8,7 @@ onready var rightMarker = $RangemarkerRight
 onready var leftMarker = $RangemarkerLeft 
 
 var rng = RandomNumberGenerator.new()
-var difficulty_level = 0.5;
+var difficulty_level = 0.7;
 onready var distance = abs(leftmost.position.x - rightmost.position.x)
 
 func _ready():
@@ -49,8 +49,6 @@ func randomize_range(score: int):
 			else:
 				random1 += (difficulty_level - diff) / 2
 				random2 -= (difficulty_level - diff) / 2
-				random1 = clamp(random1, 0, 1)
-				random2 = clamp(random2, 0, 1)
 				
 
 		elif diff > difficulty_level:
@@ -62,8 +60,10 @@ func randomize_range(score: int):
 			else:
 				random1 -= (diff - difficulty_level) / 2
 				random2 += (diff - difficulty_level) / 2
-				random1 = clamp(random1, 0, 1)
-				random2 = clamp(random2, 0, 1)
+				
+		
+		random1 = clamp(random1, 0, 1)
+		random2 = clamp(random2, 0, 1)
 		
 		if (abs(random1 - random2) == difficulty_level):
 			break;
@@ -76,8 +76,8 @@ func randomize_range(score: int):
 	PlayerVariables.HIGHRANGE = rightMarker.global_position.x
 	PlayerVariables.LOWRANGE = leftMarker.global_position.x
 	
-	difficulty_level = 0.001
-	print (difficulty_level - (PlayerVariables.SCORE as float / 100))
+	difficulty_level = clamp(difficulty_level - (PlayerVariables.SCORE as float / (80)), 0.3, 0.7);
+	print(difficulty_level)
 
 func _on_Arrow_arrow_succeeded():
 	randomize_range(PlayerVariables.SCORE)
