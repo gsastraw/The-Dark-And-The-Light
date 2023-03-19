@@ -76,7 +76,7 @@ func randomize_range(score: int):
 	PlayerVariables.HIGHRANGE = rightMarker.global_position.x
 	PlayerVariables.LOWRANGE = leftMarker.global_position.x
 	
-	difficulty_level = clamp(difficulty_level - (PlayerVariables.SCORE as float / (80)), 0.3, 0.7);
+	difficulty_level = clamp(difficulty_level - (PlayerVariables.SCORE as float / (80)), 0.1, 0.7);
 	print(difficulty_level)
 
 func _on_Arrow_arrow_succeeded():
