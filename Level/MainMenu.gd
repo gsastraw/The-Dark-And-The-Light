@@ -8,6 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$LabelScore.text = str(PlayerVariables.SCORE)
 	pass # Replace with function body.
 
 
