@@ -1,6 +1,7 @@
 extends Node2D
 var held_object = null
 var meat_on_grill = null
+var light_level: float = 0;
 var steak = preload("res://Draggable.tscn")
 
 onready var grillItem = $Draggable/Screen
@@ -26,10 +27,8 @@ func _unhandled_input(event):
 
 
 func _process(delta):
-	
-
 	$ScoreUI/LabelNumber.text = str(PlayerVariables.SCORE)
-
+	$Lighting.set_energy(PlayerVariables.LIGHT_LEVEL_GRILL)
 
 func _on_DropZone_item_dropped():
 	$Temperature/Button.disable_button(false)
@@ -38,7 +37,6 @@ func _on_DropZone_item_dropped():
 	var lul = 0
 	while meat_on_grill:
 		yield(get_tree().create_timer(0.1), "timeout")
-		print(PlayerVariables.ARROW_POS)
 	# spawnGrillItem()
 	spawnGrillItem()
 	

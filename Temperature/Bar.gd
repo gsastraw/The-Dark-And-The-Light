@@ -15,7 +15,8 @@ func _ready():
 	# print(abs(leftmost.position.x))
 	# leftmost.position.x - rightmost.position.x
 	# leftmost.distance
-	
+	PlayerVariables.ARROW_POS_HIGH = rightmost.position.x
+	print(PlayerVariables.ARROW_POS_HIGH)
 	randomize_range()
 
 func randomize_range():
