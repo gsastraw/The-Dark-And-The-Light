@@ -12,6 +12,8 @@ var instance
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	PlayerVariables.LIVES = 3
+	PlayerVariables.SCORE = 0
 	spawnGrillItem()
 	for node in get_tree().get_nodes_in_group("pickable"):
 		node.connect("clicked", self, "_on_pickable_clicked")
@@ -34,6 +36,7 @@ func _unhandled_input(event):
 
 func _process(delta):
 	$ScoreUI/LabelNumber.text = str(PlayerVariables.SCORE)
+	$LivesUI/LabelNumber.text = str(PlayerVariables.LIVES)
 	$Lighting.set_energy(PlayerVariables.LIGHT_LEVEL_GRILL)
 	
 	var texture

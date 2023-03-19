@@ -52,8 +52,9 @@ func success():
 	get_parent().get_node("AudioSuccess").play()
 
 func failure():
-	PlayerVariables.LIVES =- 1
-	pass
+	PlayerVariables.LIVES -= 1
+	if(PlayerVariables.LIVES <= 0):
+		get_tree().change_scene("res://Level/Deathscreen.tscn")
 
 
 

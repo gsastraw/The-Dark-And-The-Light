@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/UI/PixeloidSansBold-GOjpP.ttf" type="DynamicFontData" id=2]
@@ -7,12 +7,6 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
-outline_size = 3
-outline_color = Color( 0.215686, 0.0588235, 0.0588235, 1 )
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 24
 outline_size = 3
 outline_color = Color( 0.215686, 0.0588235, 0.0588235, 1 )
 font_data = ExtResource( 2 )
@@ -34,91 +28,56 @@ shadow_color = Color( 0.239216, 0, 0, 0.6 )
 shadow_size = 25
 anti_aliasing = false
 
-[sub_resource type="SpatialMaterial" id=7]
-
-[sub_resource type="CanvasItemMaterial" id=6]
-next_pass = SubResource( 7 )
-
-[sub_resource type="DynamicFont" id=8]
-size = 72
-outline_size = 3
-outline_color = Color( 0.215686, 0.0588235, 0.0588235, 1 )
-font_data = ExtResource( 2 )
-
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
 
-[node name="Label2" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -578.0
-margin_top = 15.0
-margin_right = 630.0
-margin_bottom = 194.0
-theme = ExtResource( 1 )
-custom_fonts/font = SubResource( 1 )
-text = "GRILL EVERYTHING:
- Steak Edition"
-align = 1
-
-[node name="Label" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -614.0
-margin_top = 482.0
-margin_right = 386.0
-margin_bottom = 743.0
-rect_pivot_offset = Vector2( 335, 40 )
-theme = ExtResource( 1 )
-custom_fonts/font = SubResource( 2 )
-text = "A game by:
-
-Edvin Danielsson
-Gregory Sastrawidjaya 
-Caisesiume
-
-For \"IXD / GDT March Game Jam '23\".
-Theme is The Dark and the Light"
-
-[node name="Button" type="Button" parent="."]
+[node name="LabelScore" type="Label" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -328.0
-margin_top = -167.0
-margin_right = 364.0
-margin_bottom = -73.0
+margin_left = -60.0
+margin_top = -110.0
+margin_right = 72.0
+margin_bottom = -18.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "X"
+align = 1
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -556.0
+margin_right = 556.0
+margin_bottom = 270.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER
+You failed the barbeque
+Your final score was:"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 297.0
+margin_top = 534.0
+margin_right = 989.0
+margin_bottom = 628.0
 theme = ExtResource( 1 )
 custom_colors/font_color_disabled = Color( 1, 0.427451, 0.427451, 1 )
 custom_colors/font_color = Color( 0, 1, 0.415686, 1 )
 custom_fonts/font = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
-text = "I WANNA GRILL"
+text = "THE GRILLING NEVER STOPS!"
 
 [node name="Grass4x" type="Sprite" parent="."]
-modulate = Color( 0.635294, 0.431373, 0.584314, 1 )
-material = SubResource( 6 )
+modulate = Color( 0.364706, 0, 0, 1 )
 use_parent_material = true
 position = Vector2( 626, 398 )
 scale = Vector2( 0.534979, 0.630859 )
 z_index = -1
 texture = ExtResource( 4 )
-
-[node name="LabelScore" type="Label" parent="."]
-anchor_left = 1.28906
-anchor_top = 0.7075
-anchor_right = 1.39219
-anchor_bottom = 0.8225
-margin_top = -3.05176e-05
-theme = ExtResource( 1 )
-custom_fonts/font = SubResource( 8 )
-text = "X"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
