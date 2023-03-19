@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/positive_pling.mp3-b0e1fa096c28a26e360b7054f180323a.mp3str"
+
+[deps]
+
+source_file="res://assets/Audio/positive_pling.mp3"
+dest_files=[ "res://.import/positive_pling.mp3-b0e1fa096c28a26e360b7054f180323a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

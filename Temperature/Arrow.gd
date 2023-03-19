@@ -31,12 +31,9 @@ func _physics_process(delta):
 	if (speed <= 0 and shot):
 		shot = false
 		if (global_position.x > PlayerVariables.LOWRANGE and global_position.x < PlayerVariables.HIGHRANGE):
-			print("SUCCESS")
-			PlayerVariables.SCORE += 1
-			emit_signal("arrow_succeeded")
-			PlayerVariables.CURRENTLY_GRILLING = false
+			success()
 		else:
-			print("FAIL")
+			failure()
 		reset_arrow()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -46,6 +43,19 @@ func _physics_process(delta):
 func _on_Button_button_pressed():
 	speed = PlayerVariables.CHARGE
 	shot = true
+
+func success():
+	print("SUCCESS")
+	PlayerVariables.SCORE += 1
+	emit_signal("arrow_succeeded")
+	PlayerVariables.CURRENTLY_GRILLING = false
+	get_parent().get_node("AudioSuccess").play()
+
+func failure():
+	PlayerVariables.LIVES =- 1
+	pass
+
+
 
 func reset_arrow():
 	speed = 0

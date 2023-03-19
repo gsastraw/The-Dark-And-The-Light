@@ -15,6 +15,7 @@ var CURRENTLY_GRILLING: bool = false
 var ARROW_POS_LOW: float = 0;
 var ARROW_POS_HIGH: float = 0;
 var LIGHT_LEVEL_GRILL: float = 0;
+var LIVES  = 3
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
