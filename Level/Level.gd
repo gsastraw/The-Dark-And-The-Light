@@ -38,8 +38,8 @@ func _on_DropZone_item_dropped():
 func spawnGrillItem():
 	var instance = steak.instance()
 	get_tree().get_root().get_child(1).add_child(instance)
-	
 	instance.global_position = $Spawnpoint.global_position
 	
+
 	# add_child(instance)
 	
