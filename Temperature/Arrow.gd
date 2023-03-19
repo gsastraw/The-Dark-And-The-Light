@@ -47,7 +47,7 @@ func _on_Button_button_pressed():
 	shot = true
 
 func reset_arrow():
-	
+	speed = 0
 	emit_signal("arrow_reseted")
 	velocity = direction_right
 	PlayerVariables.LIGHT_LEVEL_GRILL = 0

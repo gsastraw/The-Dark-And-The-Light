@@ -11,6 +11,7 @@ var TEMPERATURE: float = 0;
 var LOWRANGE
 var HIGHRANGE
 var ARROW_POS: float = 0;
+var CURRENTLY_GRILLING: bool = false
 var ARROW_POS_LOW: float = 0;
 var ARROW_POS_HIGH: float = 0;
 var LIGHT_LEVEL_GRILL: float = 0;

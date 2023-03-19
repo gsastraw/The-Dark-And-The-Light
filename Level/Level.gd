@@ -37,12 +37,11 @@ func _process(delta):
 func _on_DropZone_item_dropped():
 	$Temperature/Button.disable_button(false)
 	$AudioGrilling.play()
-	meat_on_grill = true
+	PlayerVariables.CURRENTLY_GRILLING = true
 	var lul = 0
-	while meat_on_grill:
+	while PlayerVariables.CURRENTLY_GRILLING:
 		yield(get_tree().create_timer(0.1), "timeout")
-	# spawnGrillItem()
-	spawnGrillItem()
+		print(PlayerVariables.ARROW_POS)
 	
 func spawnGrillItem():
 	instance = steak.instance()

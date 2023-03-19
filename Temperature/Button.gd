@@ -40,4 +40,5 @@ func increase_charge() -> void:
 
 
 func _on_Arrow_arrow_reseted():
-	disable_button(false) # this needs to be changed to sync with steaks instead
+	if(PlayerVariables.CURRENTLY_GRILLING):
+		disable_button(false) # this needs to be changed to sync with steaks instead
