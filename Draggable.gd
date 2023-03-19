@@ -7,7 +7,13 @@ can be moved around the screen
 
 var previous_mouse_position = Vector2()
 var is_dragging = false
+onready var viewport = get_parent().get_node("Viewport")
+onready var dropzone = get_parent().get_node("DropZone")
 
+func _ready():
+	#dropzone.item_dropped.connect("_on_DropZone_item_dropped")
+	
+	dropzone.connect("item_dropped", self, "_on_DropZone_item_dropped")
 
 func _on_Draggable_input_event(viewport, event, shape_idx):
 	
@@ -56,6 +62,12 @@ func _input(event):
 		previous_mouse_position = event.position
 		
 func _process(delta):
-	var texture = $Viewport.get_texture()
+	var texture
+	if(is_instance_valid(viewport)):
+		texture = viewport.get_texture()
 	if(is_instance_valid($Screen)):
 		$Screen.texture = texture
+
+
+func _on_DropZone_item_dropped():
+	$AnimationCooking.play("Cook")

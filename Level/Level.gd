@@ -37,14 +37,17 @@ func _on_DropZone_item_dropped():
 	meat_on_grill = true
 	var lul = 0
 	while meat_on_grill:
-		yield(get_tree().create_timer(1.0), "timeout")
+		yield(get_tree().create_timer(0.1), "timeout")
 		lul = lul +1
-		print(lul)
+		print(PlayerVariables.ARROW_POS)
 	# spawnGrillItem()
+	spawnGrillItem()
 	
 func spawnGrillItem():
 	var instance = steak.instance()
 	get_tree().get_root().get_child(1).add_child(instance)
 	instance.global_position = $Spawnpoint.global_position
+	
+
 	# add_child(instance)
 	
