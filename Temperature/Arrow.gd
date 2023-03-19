@@ -14,6 +14,7 @@ var og_position = self.position
 
 func _ready():
 	reset_arrow()
+	PlayerVariables.ARROW_POS_LOW = global_position.x
 
 func _physics_process(delta):
 	# velocity = velocity * speed
@@ -23,6 +24,8 @@ func _physics_process(delta):
 		velocity = velocity.bounce(collision_info.normal)
 		
 	PlayerVariables.ARROW_POS = global_position.x
+	PlayerVariables.LIGHT_LEVEL_GRILL = PlayerVariables.ARROW_POS / 750
+	
 	if (speed > 0):
 		speed -= 2.5
 	if (speed <= 0 and shot):
@@ -47,4 +50,5 @@ func reset_arrow():
 	
 	emit_signal("arrow_reseted")
 	velocity = direction_right
+	PlayerVariables.LIGHT_LEVEL_GRILL = 0
 	self.position = og_position
