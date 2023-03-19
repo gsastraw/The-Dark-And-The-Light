@@ -34,6 +34,7 @@ func _physics_process(delta):
 			print("SUCCESS")
 			PlayerVariables.SCORE += 1
 			emit_signal("arrow_succeeded")
+			PlayerVariables.CURRENTLY_GRILLING = false
 		else:
 			print("FAIL")
 		reset_arrow()
