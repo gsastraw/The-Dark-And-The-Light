@@ -38,7 +38,6 @@ func _on_DropZone_item_dropped():
 	var lul = 0
 	while meat_on_grill:
 		yield(get_tree().create_timer(0.1), "timeout")
-		lul = lul +1
 		print(PlayerVariables.ARROW_POS)
 	# spawnGrillItem()
 	spawnGrillItem()

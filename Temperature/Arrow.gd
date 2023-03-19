@@ -22,7 +22,7 @@ func _physics_process(delta):
 	if collision_info:
 		velocity = velocity.bounce(collision_info.normal)
 		
-	
+	PlayerVariables.ARROW_POS = global_position.x
 	if (speed > 0):
 		speed -= 2.5
 	if (speed <= 0 and shot):
