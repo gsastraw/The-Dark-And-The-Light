@@ -33,6 +33,13 @@ func _unhandled_input(event):
 func _process(delta):
 	$ScoreUI/LabelNumber.text = str(PlayerVariables.SCORE)
 	$Lighting.set_energy(PlayerVariables.LIGHT_LEVEL_GRILL)
+	
+	var texture
+	if(is_instance_valid($ViewportPlate)):
+		texture = $ViewportPlate.get_texture()
+	if(is_instance_valid($ScreenPlate)):
+		$ScreenPlate.texture = texture
+
 
 func _on_DropZone_item_dropped():
 	$Temperature/Button.disable_button(false)
