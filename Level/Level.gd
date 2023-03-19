@@ -4,6 +4,8 @@ var meat_on_grill = null
 var steak = preload("res://Draggable.tscn")
 
 onready var grillItem = $Draggable/Screen
+onready var arrow = get_node("Temperature/Arrow")
+var instance
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,6 +13,8 @@ func _ready():
 	spawnGrillItem()
 	for node in get_tree().get_nodes_in_group("pickable"):
 		node.connect("clicked", self, "_on_pickable_clicked")
+	
+	arrow.connect("arrow_succeeded", self, "_on_arrow_success")
 
 
 func _on_pickable_clicked(object):
@@ -43,10 +47,14 @@ func _on_DropZone_item_dropped():
 	spawnGrillItem()
 	
 func spawnGrillItem():
-	var instance = steak.instance()
+	instance = steak.instance()
 	get_tree().get_root().get_child(1).add_child(instance)
 	instance.global_position = $Spawnpoint.global_position
-	
+
+func _on_arrow_success():
+	instance.queue_free()
+	$AudioGrilling.stop()
+	spawnGrillItem()
 
 	# add_child(instance)
 	

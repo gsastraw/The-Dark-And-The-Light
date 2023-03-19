@@ -1,12 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Draggable.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-
-[sub_resource type="Shader" id=3]
-
-[sub_resource type="ShaderMaterial" id=4]
-shader = SubResource( 3 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 64 )
@@ -50,7 +45,6 @@ modulate = Color( 0.662745, 0.0196078, 0.0196078, 1 )
 texture = ExtResource( 2 )
 
 [node name="Screen" type="Sprite" parent="."]
-material = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

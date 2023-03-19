@@ -44,6 +44,7 @@ func _on_Button_button_pressed():
 	shot = true
 
 func reset_arrow():
+	
 	emit_signal("arrow_reseted")
 	velocity = direction_right
 	self.position = og_position
