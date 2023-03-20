@@ -62,7 +62,7 @@ func spawnGrillItem():
 	instance.global_position = $Spawnpoint.global_position
 
 func _on_arrow_success():
-	instance.queue_free()
+	instance.doneCooking()
 	$AudioTasty.play()
 	$AudioGrilling.stop()
 	spawnGrillItem()

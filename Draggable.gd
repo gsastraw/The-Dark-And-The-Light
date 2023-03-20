@@ -15,6 +15,7 @@ func _ready():
 	#dropzone.item_dropped.connect("_on_DropZone_item_dropped")
 	button.connect("button_pressed", self, "_on_Button_pressed")
 	dropzone.connect("item_dropped", self, "_on_DropZone_item_dropped")
+	$AnimationCooking.play("Spawning")
 
 func _on_Draggable_input_event(viewport, event, shape_idx):
 	
@@ -72,3 +73,6 @@ func _process(delta):
 
 func _on_Button_pressed():
 	$AnimationCooking.play("Cook")
+	
+func doneCooking():
+	$AnimationCooking.play("DoneCooking")
