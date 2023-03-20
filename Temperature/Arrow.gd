@@ -54,6 +54,8 @@ func failure():
 	PlayerVariables.LIVES -= 1
 	if(PlayerVariables.LIVES <= 0):
 		get_tree().change_scene("res://Level/Deathscreen.tscn")
+	if(PlayerVariables.ARROW_POS > PlayerVariables.HIGHRANGE):
+		$AudioOvercooked.play()
 
 
 
