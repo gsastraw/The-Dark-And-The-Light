@@ -17,7 +17,7 @@ func _ready():
 	# leftmost.position.x - rightmost.position.x
 	# leftmost.distance
 	PlayerVariables.ARROW_POS_HIGH = rightmost.position.x
-	print(PlayerVariables.ARROW_POS_HIGH)
+	# print(PlayerVariables.ARROW_POS_HIGH)
 	randomize_range(PlayerVariables.SCORE)
 
 func randomize_range(score: int):
@@ -29,12 +29,11 @@ func randomize_range(score: int):
 	print(leftMarker.global_position)
 	
 	rng.randomize()
-	var random1 = rng.randf_range(0,1.0)
-	var random2 = rng.randf_range(0,1.0)
+	var random1 = rng.randf_range(0.05,1.0)
+	var random2 = rng.randf_range(0.05,1.0)
 	var diff = abs(random1 - random2)
-	print('random1')
-	print(random1)
-	print('random2')
+	print('random1 value: ', random1)
+	print('random2 value: ', random2)
 	
 	print(diff)
 	
@@ -62,21 +61,28 @@ func randomize_range(score: int):
 				random2 += (diff - difficulty_level) / 2
 				
 		
-		random1 = clamp(random1, 0, 1)
-		random2 = clamp(random2, 0, 1)
+		
+
 		
 		if (abs(random1 - random2) == difficulty_level):
 			break;
-
-	var highValue = max(random1, random2)
-	var lowValue = min(random1, random2)
+	random1 = clamp(random1, 0.00, 0.98)
+	random2 = clamp(random2, 0.00, 0.98)
+	print("new random1 value is: ", random1)
+	print("new random2 value is: ", random2)
 	
+	
+	var highValue = max(random1, random2)
+	print("High value is: ", highValue)
+	var lowValue = min(random1, random2)
+	print("Low value is: ", lowValue)
+		
 	rightMarker.position.x = rightmost.position.x - distance*lowValue
 	leftMarker.position.x = rightmost.position.x - distance*highValue
 	PlayerVariables.HIGHRANGE = rightMarker.global_position.x
 	PlayerVariables.LOWRANGE = leftMarker.global_position.x
 	
-	difficulty_level = clamp(difficulty_level - (PlayerVariables.SCORE as float / (70)), 0.1, 0.7);
+	difficulty_level = clamp(difficulty_level - (PlayerVariables.SCORE as float / (90)), 0.1, 0.7);
 	print(difficulty_level)
 
 func _on_Arrow_arrow_succeeded():

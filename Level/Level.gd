@@ -51,10 +51,10 @@ func _on_DropZone_item_dropped():
 	$AudioMm.play()
 	$Temperature/Button.disable_button(false)
 	PlayerVariables.CURRENTLY_GRILLING = true
-	var lul = 0
+	# var lul = 0
 	while PlayerVariables.CURRENTLY_GRILLING:
 		yield(get_tree().create_timer(0.1), "timeout")
-		print(PlayerVariables.ARROW_POS)
+		# print(PlayerVariables.ARROW_POS)
 	
 func spawnGrillItem():
 	instance = steak.instance()

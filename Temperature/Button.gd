@@ -19,7 +19,7 @@ func disable_button(var option:bool):
 func _process(delta: float) -> void:
 	if (isActivated):
 		increase_charge()
-	sprite.rotation_degrees = PlayerVariables.CHARGE / 3
+	sprite.rotation_degrees = PlayerVariables.CHARGE / 2.25
 	
 func _input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton and event.button_index == BUTTON_LEFT):
@@ -39,7 +39,7 @@ func increase_charge() -> void:
 	if (PlayerVariables.CHARGE > PlayerVariables.CHARGE_LIMIT):
 		PlayerVariables.CHARGE = PlayerVariables.CHARGE_LIMIT;
 	elif (PlayerVariables.CHARGE < PlayerVariables.CHARGE_LIMIT):
-		PlayerVariables.CHARGE += 6;
+		PlayerVariables.CHARGE += 4.5;
 
 
 func _on_Arrow_arrow_reseted():
